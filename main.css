@@ -1,3 +1,4 @@
+/*global styles*/
 * {
     margin: auto;
     padding: 10px;
@@ -7,12 +8,16 @@
 h1 {
     font-size: 50px;
 }
+/*removes hidden class from html element when button is clicked in javascript*/
 .hidden {
     display: none;
 }
+/*also adds unclickable class to button when clicked*/
 .unclickable {
     pointer-events: none;
+    opacity: 0.5;
 }
+/*main styling*/
 .generative-AI {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -21,67 +26,53 @@ h1 {
     max-width: 600px;
     width: 90%;
 }
+/*makes all span elements display block to give space between*/
 span {
     display: block;
     margin-bottom: 15px;
-    font-size: 1.1em;
+    font-size: 18px;
     line-height: 1.6;
 }
+/*label span and button styling*/
 label {
     display: block;
     margin: 20px 0 10px;
-    font-size: 1.2em;
+    font-size: 18px;
 }
 input {
     width: 30%;
     padding: 10px;
     box-sizing: border-box;
     margin-bottom: 20px;
-    border: 2px solid #6C63FF;
+    border: 2px solid lightseagreen;
     border-radius: 5px;
-    color: #333;
 }
 button {
-    background-color: #4ECDC4;
-    color: #fff;
+    background-color: lightseagreen;
+    color: white;
     padding: 15px 25px;
-    font-size: 1.2em;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
+/*change background color when button is hoveres*/
 button:hover {
-    background-color: #38B4A4;
+    background-color: seagreen;
 }
-.generated-story {
+.generated-recipe {
     text-align: start;
 }
+/*media tag for phone view*/
 @media only screen and (max-width: 768px) {
-    .generative-AI {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-        margin-bottom: 15px;
-    }
-
-    label {
-        margin: 15px 0 5px;
-    }
-
-    input {
-        margin-bottom: 15px;
-    }
-
     button {
-        padding: 12px 20px;
         width: 100%;
     }
-
-    .generated-story {
-        font-size: 1.2em;
+    input {
+        width: 100%;
+    }
+    .generated-recipe {
+        font-size: 18px;
     }
 }
